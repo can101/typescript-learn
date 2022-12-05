@@ -11,7 +11,7 @@ tsc file_name.ts --watch =>listen change file
 
 ```ts
 variable type
-number,boolean,string
+number,boolean,string,object
 
 let character = 'mario';
 let age = 30;
@@ -69,5 +69,58 @@ ninja = {
     belt: "orange",
     age: 40,
     skilss:[]
+}
+```
+## 5 lesson
+
+```ts
+
+// explicit types
+
+let character: string;
+let age: number;
+let isLoggedIn: boolean;
+
+// age="lugi"; // type assignable error
+age = 30;
+
+// isLoggedIn=25; // type assignable error
+isLoggedIn = true;
+
+// arrays
+let ninjas: string[] = [];
+
+// ninjas = ['yoshi', 'mario'];
+ninjas.push("can"); // cannot read properties error push, pass intal value arr
+
+// union types
+
+let mixed: (string | number | boolean)[] = [];
+
+mixed.push('hi')
+mixed.push(25);
+mixed.push(true);
+
+console.log(mixed);
+
+let uid: string | number;
+uid = 1223245;
+uid = '1223245';
+
+// objects
+let ninjaOne: object;
+ninjaOne = { name: "can", age: 32 };
+// ninjaOne = "" error type
+// ninjaOne = [] error type
+
+let ninjaTwo: {
+    name: string,
+    age: number,
+    beltColour: string
+}
+ninjaOne={
+    name:"can",
+    age:20,
+    beltColour:"blue"
 }
 ```

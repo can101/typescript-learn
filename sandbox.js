@@ -26,29 +26,62 @@
 // }
 // console.log(circ(7.5))
 // lesson 4
-var names = ['lugi', 'anderson', 'yoshi'];
-names.push('toad');
-// names.push(3);
-// names[0]=3
-var numbers = [10, 20, 30, 40, 50];
-// numbers.push("fdgsfd");
-// numbers[1]='fdsg';
-var mixed = ['ken', 4, 'chun-li', 8, 9];
-mixed.push('ryu');
-mixed.push(10);
-mixed[0] = 3;
-var ninja = {
-    name: "mario",
-    belt: "black",
-    age: 30
-};
-ninja.age = 40;
-ninja.name = "can";
-// ninja.age='40'; type error
-// ninja.skilss=["fighting",'sneaking'];
-// ninja = {
-//     name: "yoshi",
-//     belt: "orange",
-//     age: 40,
-//     skilss:[]
+// let names = ['lugi', 'anderson', 'yoshi'];
+// names.push('toad');
+// // names.push(3);
+// // names[0]=3
+// let numbers = [10, 20, 30, 40, 50];
+// // numbers.push("fdgsfd");
+// // numbers[1]='fdsg';
+// let mixed = ['ken', 4, 'chun-li', 8, 9];
+// mixed.push('ryu');
+// mixed.push(10);
+// mixed[0] = 3;
+// let ninja = {
+//     name: "mario",
+//     belt: "black",
+//     age: 30
 // }
+// ninja.age = 40;
+// ninja.name = "can";
+// // ninja.age='40'; type error
+// // ninja.skilss=["fighting",'sneaking'];
+// // ninja = {
+// //     name: "yoshi",
+// //     belt: "orange",
+// //     age: 40,
+// //     skilss:[]
+// // }
+// lesson 5
+// explicit types
+var character;
+var age;
+var isLoggedIn;
+// age="lugi"; // type assignable error
+age = 30;
+// isLoggedIn=25; // type assignable error
+isLoggedIn = true;
+// arrays
+var ninjas = [];
+// ninjas = ['yoshi', 'mario'];
+ninjas.push("can"); // cannot read properties error push, pass intal value arr
+// union types
+var mixed = [];
+mixed.push('hi');
+mixed.push(25);
+mixed.push(true);
+console.log(mixed);
+var uid;
+uid = 1223245;
+uid = '1223245';
+// objects
+var ninjaOne;
+ninjaOne = { name: "can", age: 32 };
+// ninjaOne = "" error type
+// ninjaOne = [] error type
+var ninjaTwo;
+ninjaOne = {
+    name: "can",
+    age: 20,
+    beltColour: "blue"
+};
