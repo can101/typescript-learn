@@ -25,3 +25,30 @@
 //     return diameter * Math.PI;
 // }
 // console.log(circ(7.5))
+// lesson 4
+var names = ['lugi', 'anderson', 'yoshi'];
+names.push('toad');
+// names.push(3);
+// names[0]=3
+var numbers = [10, 20, 30, 40, 50];
+// numbers.push("fdgsfd");
+// numbers[1]='fdsg';
+var mixed = ['ken', 4, 'chun-li', 8, 9];
+mixed.push('ryu');
+mixed.push(10);
+mixed[0] = 3;
+var ninja = {
+    name: "mario",
+    belt: "black",
+    age: 30
+};
+ninja.age = 40;
+ninja.name = "can";
+// ninja.age='40'; type error
+// ninja.skilss=["fighting",'sneaking'];
+// ninja = {
+//     name: "yoshi",
+//     belt: "orange",
+//     age: 40,
+//     skilss:[]
+// }
