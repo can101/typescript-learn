@@ -11,7 +11,7 @@ tsc file_name.ts --watch =>listen change file
 
 ```ts
 variable type
-number,boolean,string,object
+number,boolean,string,object,any
 
 let character = 'mario';
 let age = 30;
@@ -123,4 +123,33 @@ ninjaOne={
     age:20,
     beltColour:"blue"
 }
+```
+## lesson 6
+```ts
+let age: any = 25;
+
+age = true;
+console.log(age)
+age = "text";
+console.log(age)
+age = { name: 'aderson' };
+console.log(age)
+
+let mixed: any[] = [];
+mixed.push(5);
+mixed.push('mario');
+mixed.push(false);
+console.log(mixed);
+
+let ninja: { name: any, age: any };
+ninja = {
+    name: "yoshi",
+    age: 25
+}
+console.log(ninja);
+ninja = {
+    age: "yoshi",
+    name: 25
+}
+console.log(ninja);
 ```

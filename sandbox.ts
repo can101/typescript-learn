@@ -70,49 +70,77 @@
 
 // explicit types
 
-let character: string;
-let age: number;
-let isLoggedIn: boolean;
+// let character: string;
+// let age: number;
+// let isLoggedIn: boolean;
 
-// age="lugi"; // type assignable error
-age = 30;
+// // age="lugi"; // type assignable error
+// age = 30;
 
-// isLoggedIn=25; // type assignable error
-isLoggedIn = true;
+// // isLoggedIn=25; // type assignable error
+// isLoggedIn = true;
 
-// arrays
-let ninjas: string[] = [];
+// // arrays
+// let ninjas: string[] = [];
 
-// ninjas = ['yoshi', 'mario'];
-ninjas.push("can"); // cannot read properties error push, pass intal value arr
+// // ninjas = ['yoshi', 'mario'];
+// ninjas.push("can"); // cannot read properties error push, pass intal value arr
 
-// union types
+// // union types
 
-let mixed: (string | number | boolean)[] = [];
+// let mixed: (string | number | boolean)[] = [];
 
-mixed.push('hi')
-mixed.push(25);
-mixed.push(true);
+// mixed.push('hi')
+// mixed.push(25);
+// mixed.push(true);
 
+// console.log(mixed);
+
+// let uid: string | number;
+// uid = 1223245;
+// uid = '1223245';
+
+// // objects
+// let ninjaOne: object;
+// ninjaOne = { name: "can", age: 32 };
+// // ninjaOne = "" error type
+// // ninjaOne = [] error type
+
+// let ninjaTwo: {
+//     name: string,
+//     age: number,
+//     beltColour: string
+// }
+// ninjaOne={
+//     name:"can",
+//     age:20,
+//     beltColour:"blue"
+// }
+
+// lesson 6
+let age: any = 25;
+
+age = true;
+console.log(age)
+age = "text";
+console.log(age)
+age = { name: 'aderson' };
+console.log(age)
+
+let mixed: any[] = [];
+mixed.push(5);
+mixed.push('mario');
+mixed.push(false);
 console.log(mixed);
 
-let uid: string | number;
-uid = 1223245;
-uid = '1223245';
-
-// objects
-let ninjaOne: object;
-ninjaOne = { name: "can", age: 32 };
-// ninjaOne = "" error type
-// ninjaOne = [] error type
-
-let ninjaTwo: {
-    name: string,
-    age: number,
-    beltColour: string
+let ninja: { name: any, age: any };
+ninja = {
+    name: "yoshi",
+    age: 25
 }
-ninjaOne={
-    name:"can",
-    age:20,
-    beltColour:"blue"
+console.log(ninja);
+ninja = {
+    age: "yoshi",
+    name: 25
 }
+console.log(ninja);
