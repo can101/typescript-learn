@@ -4,7 +4,7 @@
 
 ```comand
 tsc file_name.ts
-tsc file_name.ts --watch or tsc -w =>listen change file reganarate js file
+tsc file_name.ts --watch =>listen change file reganarate js file
 /* auto genarate js code */
 ```
 ## 3 lesson
@@ -152,11 +152,4 @@ ninja = {
     name: 25
 }
 console.log(ninja);
-```
-## lesson 7
-```command
-tsc --init // auto generate tsconfig.json file
-
-open the tsconfig.json file change root and out directory
-
 ```
