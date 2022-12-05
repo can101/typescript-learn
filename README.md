@@ -211,3 +211,34 @@ const greetAgain = (user: objectWithName) => {
 }
 
 ```
+## lesson 10 `Functions Types(signatures)`
+
+```ts
+// example 1
+let greet: (x: string, y: string) => void; // signature
+
+greet = (name: string, greeeting: string) => { // function
+    console.log(name + " says " + greeeting);
+}
+// example 2
+let calc: (a: number, b: number, c: string) => number; // signature
+
+calc = (numOne: number, numTwo: number, action: string): number => { // function
+    if (action === "add") {
+        return numOne + numTwo
+    }
+    else {
+        return numOne - numTwo;
+    }
+}
+// example 3
+let logDetails: (obj: { name: string, age: number }) => void;
+
+type person = { name: string, age: number }
+
+logDetails = (ninja: person) => {
+    console.log(`${ninja} is ${ninja.age} years old`);
+
+}
+
+```
