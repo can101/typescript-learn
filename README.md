@@ -4,7 +4,7 @@
 
 ```comand
 tsc file_name.ts
-tsc file_name.ts --watch =>listen change file
+tsc file_name.ts --watch =>listen change file reganarate js file
 /* auto genarate js code */
 ```
 ## 3 lesson
