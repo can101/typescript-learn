@@ -193,3 +193,21 @@ const minus = (a: number, b: number): number => {
 let result = minus(10, 7);
 // result="sumthing else"// Type 'string' is not assignable to type 'number'.
 ```
+## lesson 9 `type aliases`
+
+```ts
+type stringORNumber = string | number
+type objectWithName = { name: string, uid: stringORNumber }
+
+const logDetails = (uid: stringORNumber, item: string) => {
+    console.log(`${item} has a uid of ${uid}`);
+}
+
+const greet = (user: objectWithName) => {
+    console.log(`${user.name} says hello`);
+}
+const greetAgain = (user: objectWithName) => {
+    console.log(`${user.name} says hello`);
+}
+
+```
