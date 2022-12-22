@@ -11,16 +11,17 @@ const anchor = document.querySelector('a');
 // console.log(anchor?.href);
 
 class Invoice {
-    client: string;
-    details: string;
-    amount: number;
-    constructor(c: string, d: string, a: number) {
-        this.client = c;
-        this.details = d;
-        this.amount = a;
+   // readonly client: string;
+   // private details: string;
+   // public amount: number;
+    // constructor(c: string, d: string, a: number) { // first way
+        constructor(readonly client: string,private details: string,public amount: number) { //second way
+        // this.client = c;
+        // this.details = d;
+        // this.amount = a;
     }
     format() {
-        return `${this.client} owes \$${this.amount} for ${this.details}`;
+        return `${this.client} owes €${this.amount} for ${this.details}`;
     }
 }
 
@@ -33,8 +34,13 @@ let invoices: Invoice[] = [];
 invoices.push(invOne)
 invoices.push(invTwo)
 
-invOne.client='yoshi'
-invTwo.client='yoshi'
+invoices.forEach(inv=>{
+    // inv.client="something else"
+    console.log(inv.client,inv.amount,inv.format())
+})
+
+// invOne.client='yoshi'
+// invTwo.client='yoshi'
 
 // const form=document.querySelector('form');
 const form = document.querySelector('.new-item-form') as HTMLFormElement;

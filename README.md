@@ -273,7 +273,7 @@ form.addEventListener('submit', (e: Event) => {
     console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
 })
 ```
-## lesson 11 `Classes`
+## lesson 12 `Classes`
 ```ts
 class Invoice {
     client: string;
@@ -300,4 +300,36 @@ invoices.push(invTwo)
 
 invOne.client='yoshi'
 invTwo.client='yoshi'
+```
+## lesson 13 `Public,Private & Readonly`
+> `Private` `Public` `Readonly`
+```ts
+class Invoice {
+   // readonly client: string;
+   // private details: string;
+   // public amount: number;
+    // constructor(c: string, d: string, a: number) { // first way
+        constructor(readonly client: string,private details: string,public amount: number) { //second way
+        // this.client = c;
+        // this.details = d;
+        // this.amount = a;
+    }
+    format() {
+        return `${this.client} owes €${this.amount} for ${this.details}`;
+    }
+}
+
+const invOne = new Invoice('mario', "work on the mari website", 250)
+const invTwo = new Invoice('luigi', "work on the mari website", 300)
+
+// console.log(invOne, invTwo);
+let invoices: Invoice[] = [];
+
+invoices.push(invOne)
+invoices.push(invTwo)
+
+invoices.forEach(inv=>{
+    // inv.client="something else"
+    console.log(inv.client,inv.amount,inv.format())
+})
 ```

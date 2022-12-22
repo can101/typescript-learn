@@ -7,13 +7,20 @@ var anchor = document.querySelector('a');
 // }
 // console.log(anchor?.href);
 var Invoice = /** @class */ (function () {
-    function Invoice(c, d, a) {
-        this.client = c;
-        this.details = d;
-        this.amount = a;
+    // readonly client: string;
+    // private details: string;
+    // public amount: number;
+    // constructor(c: string, d: string, a: number) { // first way
+    function Invoice(client, details, amount) {
+        this.client = client;
+        this.details = details;
+        this.amount = amount;
+        // this.client = c;
+        // this.details = d;
+        // this.amount = a;
     }
     Invoice.prototype.format = function () {
-        return "".concat(this.client, " owes $").concat(this.amount, " for ").concat(this.details);
+        return "".concat(this.client, " owes \u20AC").concat(this.amount, " for ").concat(this.details);
     };
     return Invoice;
 }());
@@ -23,8 +30,12 @@ var invTwo = new Invoice('luigi', "work on the mari website", 300);
 var invoices = [];
 invoices.push(invOne);
 invoices.push(invTwo);
-invOne.client = 'yoshi';
-invTwo.client = 'yoshi';
+invoices.forEach(function (inv) {
+    // inv.client="something else"
+    console.log(inv.client, inv.amount, inv.format());
+});
+// invOne.client='yoshi'
+// invTwo.client='yoshi'
 // const form=document.querySelector('form');
 var form = document.querySelector('.new-item-form');
 // console.log(form.children);
