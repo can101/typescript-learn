@@ -1,3 +1,5 @@
+import {Invoice} from './classes/Invoice.js'
+
 const anchor = document.querySelector('a');
 
 // console.log('====================================');
@@ -10,20 +12,20 @@ const anchor = document.querySelector('a');
 
 // console.log(anchor?.href);
 
-class Invoice {
-   // readonly client: string;
-   // private details: string;
-   // public amount: number;
-    // constructor(c: string, d: string, a: number) { // first way
-        constructor(readonly client: string,private details: string,public amount: number) { //second way
-        // this.client = c;
-        // this.details = d;
-        // this.amount = a;
-    }
-    format() {
-        return `${this.client} owes €${this.amount} for ${this.details}`;
-    }
-}
+// class Invoice {
+//    // readonly client: string;
+//    // private details: string;
+//    // public amount: number;
+//     // constructor(c: string, d: string, a: number) { // first way
+//         constructor(readonly client: string,private details: string,public amount: number) { //second way
+//         // this.client = c;
+//         // this.details = d;
+//         // this.amount = a;
+//     }
+//     format() {
+//         return `${this.client} owes €${this.amount} for ${this.details}`;
+//     }
+// }
 
 const invOne = new Invoice('mario', "work on the mari website", 250)
 const invTwo = new Invoice('luigi', "work on the mari website", 300)
